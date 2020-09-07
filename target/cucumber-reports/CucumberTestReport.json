@@ -1,0 +1,156 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Connetting to database",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 97000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "user establish connection to database \"demoHR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"demoHR\"",
+                  "offset": 38
+                }
+              ],
+              "location": "step_definitions.demoHR.user_establish_connection_to_database(java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-06T23:54:23.282Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1648000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "postgres testing demoHR departments",
+        "description": "",
+        "id": "query-database-demohr;postgres-testing-demohr-departments",
+        "after": [
+          {
+            "result": {
+              "duration": 78000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user executes query \"select * from departments\" and verifies result \"Finance\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select * from departments\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Finance\"",
+                  "offset": 68
+                }
+              ],
+              "location": "step_definitions.demoHR.user_executes_query_and_verifies_result(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1181000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user executes query \"select * from employees\" and verifies column name \"first_name\" and result value \"Mary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select * from employees\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"first_name\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Mary\"",
+                  "offset": 101
+                }
+              ],
+              "location": "step_definitions.demoHR.user_executes_query_and_verifies_column_name_and_result_value(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user gets total row count for query \"Select * from departments\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Select * from departments\"",
+                  "offset": 36
+                }
+              ],
+              "location": "step_definitions.demoHR.user_gets_total_row_count_for_query(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user closes connection to database",
+            "match": {
+              "location": "step_definitions.demoHR.user_closes_connection_to_database()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@demoHR"
+          }
+        ]
+      }
+    ],
+    "name": "Query database demoHR",
+    "description": "",
+    "id": "query-database-demohr",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/demoHR.feature",
+    "tags": []
+  }
+]
